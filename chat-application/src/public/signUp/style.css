@@ -1,0 +1,47 @@
+/* SignUpForm.css */
+.custom-card {
+    /* Custom styles for the card container */
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-card-body {
+    /* Custom styles for the card body */
+    text-align: center; /* Center the content horizontally */
+  }
+  
+  .custom-input {
+    /* Custom styles for input fields */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; /* Make the input boxes full-width */
+    margin-bottom: 10px;
+    max-width: 300px; /* Limit the maximum width of the input boxes */
+    margin: 0 auto; /* Center the input boxes horizontally */
+  }
+  
+  .custom-button {
+    /* Custom styles for the submit button */
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block; /* Make the button a block element */
+    margin: 0 auto; /* Center the button horizontally */
+  }
+  
+  .custom-button:hover {
+    /* Custom styles for button on hover */
+    background-color: #0056b3;
+  }
+  
+  /* Additional styles for the form label */
+  .form-label {
+    text-align: left;
+  }
+  
