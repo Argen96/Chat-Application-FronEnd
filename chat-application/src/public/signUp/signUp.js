@@ -35,116 +35,89 @@ function SignUp(){
 
     const onClick = async (event) => {
         event.preventDefault();
-      
-        try {
-          const response = await fetch('http://localhost:80/auth/google-initiate', {
-            method: 'GET',
-            credentials: 'include', 
-            headers: {
-              Accept: 'application/json',
-              'Content-Type': 'application/json',
-            },
-          });
-          if (response.ok) {
-            const data = await response.json();
-            console.log(data.url);
-            window.location.href = data.url;
-          } else {
-            const errorData = await response.json();
-            setError(errorData.message || 'An error occurred');
-          }
-        } catch (error) {
-          console.error('An error occurred:', error);
-          setError('An error occurred');
-        }
+        window.open('http://localhost:80/auth/google/callback', '_self')
       };
       
       
 
     return (
-     <div> 
-      <Header/>
+        <div> 
+        <Header/>
         <div className="container mt-5">
-          <div className="row justify-content-center">
-            <div className="col-md-6">
-              <div className="custom-card">
-                <div className="custom-card-body">
-                  <h1 className="text-center fw-bold">Sign up</h1>
-                  <form id="sign-up" onSubmit={onSubmit}>
-                    <div className="custom-input-group">
-                      <label htmlFor="email" className="custom-label">
-                        Email *
-                      </label>
-                      <input
-                        className="form-control custom-input"
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Email..."
-                        minLength="5"
-                        maxLength="20"
-                        required
-                      />
-                    </div>
-                    <div className="custom-input-group">
-                      <label htmlFor="password" className="custom-label">
-                        Password
-                      </label>
-                      <input
-                        className="form-control custom-input"
-                        type="password"
-                        id="password"
-                        name="password"
-                        placeholder="Password..."
-                      />
-                    </div>
-                    <div className="custom-input-group">
-                      <label htmlFor="first_name" className="custom-label">
-                        First Name
-                      </label>
-                      <input
-                        className="form-control custom-input"
-                        type="text"
-                        id="first_name"
-                        name="first_name"
-                        placeholder="First Name..."
-                      />
-                    </div>
-                    <div className="custom-input-group">
-                      <label htmlFor="last_name" className="custom-label">
-                        Last Name
-                      </label>
-                      <input
-                        className="form-control custom-input"
-                        type="text"
-                        id="last_name"
-                        name="last_name"
-                        placeholder="Last Name..."
-                      />
-                    </div>
-                    {error ? <p className="text-danger">{error}</p> : null}
-                    <div className="text-center">
-                      <button type="submit" className="btn btn-primary custom-button">
-                        Create Account
-                      </button>
-                    </div>
-                    <p className="mt-4 fs-6 text-center">
-                      Already a user? <Link to="/">Log in</Link>
-                    </p>
-                  </form>
-                  <button onClick={onClick}
-                    type="submit"
-                    name="submit"
-                    className="l"
-                  >
-                    Sign Up with Google
-                 </button>
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <div className="card custom-card">
+            <div className="card-body custom-card-body">
+              <h1 className="text-center fw-bold mb-4">Sign up</h1>
+              <form id="sign-up" onSubmit={onSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
+                    Email *
+                  </label>
+                  <input
+                    className="form-control custom-input"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email..."
+                    required
+                  />
                 </div>
-              </div>
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">
+                    Password
+                  </label>
+                  <input
+                    className="form-control custom-input"
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Password..."
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="first_name" className="form-label">
+                    First Name
+                  </label>
+                  <input
+                    className="form-control custom-input"
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    placeholder="First Name..."
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="last_name" className="form-label">
+                    Last Name
+                  </label>
+                  <input
+                    className="form-control custom-input"
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="Last Name..."
+                  />
+                </div>
+                {error && <p className="text-danger">{error}</p>}
+                <div className="text-center">
+                  <button type="submit" className="btn btn-primary custom-button">
+                    Create Account
+                  </button>
+                </div>
+                <p className="mt-4 fs-6 text-center">
+                  Already a user? <Link to="/log-in">Log in</Link>
+                </p>
+              </form>
+              <button onClick={onClick} type="button" className="btn btn-secondary w-100 mt-3 custom-google-button">
+                Sign Up with Google
+              </button>
             </div>
           </div>
         </div>
-       < Footer />
+      </div>
+    </div>
+        <Footer />
       </div>
       );
 };

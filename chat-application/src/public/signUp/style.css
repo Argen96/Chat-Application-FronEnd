@@ -1,47 +1,65 @@
-/* SignUpForm.css */
+
+body{
+  height: fit-content;
+}
+
 .custom-card {
-    /* Custom styles for the card container */
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .custom-card-body {
-    /* Custom styles for the card body */
-    text-align: center; /* Center the content horizontally */
-  }
-  
-  .custom-input {
-    /* Custom styles for input fields */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    width: 100%; /* Make the input boxes full-width */
-    margin-bottom: 10px;
-    max-width: 300px; /* Limit the maximum width of the input boxes */
-    margin: 0 auto; /* Center the input boxes horizontally */
-  }
-  
-  .custom-button {
-    /* Custom styles for the submit button */
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    display: block; /* Make the button a block element */
-    margin: 0 auto; /* Center the button horizontally */
-  }
-  
-  .custom-button:hover {
-    /* Custom styles for button on hover */
-    background-color: #0056b3;
-  }
-  
-  /* Additional styles for the form label */
-  .form-label {
-    text-align: left;
+  background-color: #f4f4f4; /* Background color for the card */
+  border: 1px solid #b8c1ee; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center-align card content */
+}
+
+.custom-card-body {
+  padding: 20px; /* Add padding for spacing within the card */
+}
+
+.custom-input {
+  font-size: 14px; /* Adjust font size for input fields */
+  text-align: center; /* Center-align input text */
+}
+
+.custom-button {
+  background-color: #007bff; /* Button background color */
+  border: none; /* Remove button border */
+  color: #fff; /* Text color */
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Hover color for the button */
+}
+
+.custom-google-button {
+  background-color: #db4a39; /* Google button background color */
+  border: none; /* Remove button border */
+  color: #fff; /* Text color */
+}
+
+.custom-google-button:hover {
+  background-color: #c43225; /* Hover color for the Google button */
+}
+
+/* Center-align labels */
+.form-label {
+  text-align: center;
+}
+
+/* Center-align error message */
+.text-danger {
+  text-align: center;
+}
+
+/* Center-align link text */
+.fs-6.text-center a {
+  text-align: center;
+  display: inline-block;
+  margin-top: 10px; /* Add margin for spacing */
+}
+
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .col-md-6 {
+      width: 100%;
+    }
   }
   

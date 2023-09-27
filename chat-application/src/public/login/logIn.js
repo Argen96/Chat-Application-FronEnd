@@ -6,19 +6,10 @@ import Footer from "../../components/footer/footer.js";
 import './style.css'
 
 function LogIn(){
-  const [error,setError] = useState(null);
+ 
+ const [error,setError] = useState(null);
   const navigate = useNavigate()
-  const user_id = localStorage.getItem('user_id');
   
-  React.useEffect(() => {
-      function idExistDuringBackSWardsButton () {
-          if(user_id){
-            navigate('/trips')
-          }
-        }
-      idExistDuringBackSWardsButton ()
-  }, []);
-
   const onSubmit = async (event) => {
     event.preventDefault();
     const form = event.target;
@@ -29,7 +20,7 @@ function LogIn(){
     
     const response = await fetch('http://localhost:80/api/log-in', {
       method: 'POST', headers: {
-        'Content-Type': 'application/json; charset=utf-8 '
+        'Content-Type': 'application/json; charset=utf-8'
       }, body: JSON.stringify(values)
     })
     const data = await response.json();
@@ -40,7 +31,7 @@ function LogIn(){
       setError(data.message);
     }
   };
- 
+
 return (
  <div> 
   <Header/>
@@ -50,7 +41,7 @@ return (
           <div className="custom-card">
             <div className="custom-card-body">
               <h1 className="text-center fw-bold">Login</h1>
-              <form id="login" onSubmit={onSubmit}>
+              <form id="login" onSubmit={ onSubmit }>
                 <div className="custom-input-group">
                   <label htmlFor="email" className="custom-label">
                     Email *
@@ -93,13 +84,20 @@ return (
                   You're not a user yet? <Link to="/">Sign up</Link>
                 </p>
               </form>
+              <Link to="/forgot-password">
+             <button 
+             className="l"> 
+             Forget Password
+            </button> 
+            </Link> 
             </div>
           </div>
         </div>
       </div>
     </div>
-   < Footer />
-</div>
+  <Footer />
+ </div>
   );
 }
+
 export default LogIn;

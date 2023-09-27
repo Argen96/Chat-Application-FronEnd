@@ -1,12 +1,19 @@
+/* style.css */
+body{
+  margin:0
+}
+
 .custom-header {
-    background-color: #007bff;
-    padding: 20px 0;
-    margin-bottom: 20px;
-  }
-  
-  .custom-header-text {
-    color: #fff;
-    font-size: 24px;
-    margin: 0;
-  }
-  
+  background-color:rgb(26, 26, 201); /* Set your preferred background color */
+
+  padding: 20px 0; /* Add padding for spacing */
+  text-align: center; /* Center-align the text */
+}
+
+.custom-header-text {
+  font-size: 24px; /* Set the font size for the text */
+  color: #fff; /* Set the text color */
+  margin: 0; /* Remove margin to eliminate the space at the top */
+  padding: 0; /* Remove padding */
+  line-height: 1; /* Vertically center the text within the header */
+}
