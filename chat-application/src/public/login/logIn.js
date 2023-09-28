@@ -25,7 +25,8 @@ function LogIn(){
     })
     const data = await response.json();
     if(response.ok) {
-      navigate('/Welcome')
+      data.token && localStorage.setItem('access_token', data.token)
+      navigate('/welcome')
     }
     else {
       setError(data.message);

@@ -36,14 +36,13 @@ function SignUp(){
     const onClick = async (event) => {
         event.preventDefault();
         window.open('http://localhost:80/auth/google/callback', '_self')
+        navigate('/welcome')
       };
       
-      
-
-    return (
-        <div> 
-        <Header/>
-        <div className="container mt-5">
+return (
+  <div> 
+   <Header/>
+    <div className="container mt-5">
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="card custom-card">
@@ -117,8 +116,8 @@ function SignUp(){
         </div>
       </div>
     </div>
-        <Footer />
-      </div>
+  <Footer />
+</div>
       );
 };
 

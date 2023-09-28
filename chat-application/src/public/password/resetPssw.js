@@ -3,6 +3,7 @@ import Header from '../../components/header/header.js';
 import { useState } from "react";
 import { useEffect } from 'react';
 import Footer from '../../components/footer/footer.js';
+import './style.css'
 
 function ResetPasswordPage() {
     const [error, setError] = useState(null);
