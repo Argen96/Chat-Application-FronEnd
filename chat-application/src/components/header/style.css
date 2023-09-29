@@ -4,16 +4,67 @@ body{
 }
 
 .custom-header {
-  background-color:rgb(26, 26, 201); /* Set your preferred background color */
-
-  padding: 20px 0; /* Add padding for spacing */
-  text-align: center; /* Center-align the text */
+  background-color: #1e87f0;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .custom-header-text {
-  font-size: 24px; /* Set the font size for the text */
-  color: #fff; /* Set the text color */
-  margin: 0; /* Remove margin to eliminate the space at the top */
-  padding: 0; /* Remove padding */
-  line-height: 1; /* Vertically center the text within the header */
+  margin: 0; /* Remove default margin for the h1 element */
+  font-size: 24px;
 }
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between elements as needed */
+}
+
+.search-bar {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+
+.search-button {
+  background-color: #4b0831; /* Adjust the background color as needed */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1566d3; /* Adjust the hover background color as needed */
+}
+
+
+.logout-button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ff4500;
+}
+

@@ -2,11 +2,10 @@
 
 .welcome-container {
     background-color: #f8f8f8;
-    padding: 20px;
+    padding: 80px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+    min-height: 110vh;
   }
   
   .welcome-content {
@@ -14,18 +13,18 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 80%;
-    max-width: 600px;
+    max-width: 1400px;
   }
   
   .welcome-message {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
+    font-size: 25px;
+    color: blue;
+    margin-left:100px;
+    margin-top:60px
   }
   
   .contact-heading {
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 16px;
   }
   
@@ -37,6 +36,7 @@
   .contact-card {
     background-color: #ffffff;
     border-radius: 8px;
+    max-width: 40%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 8px;
     padding: 12px;

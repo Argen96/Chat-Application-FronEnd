@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Footer from "../../components/footer/footer.js";
-import Header from "../../components/header/header.js";
+import HomeHeader from "../../components/header/homeHeader.js";
 import './style.css'
 
 function Welcome() {
@@ -30,10 +30,9 @@ function Welcome() {
         const [user] = original_user;
         const { first_name, last_name } = user;
 
-        // Fetch random images for each user (for demo purposes)
         const usersWithImages = await Promise.all(
           other_users.map(async (contact) => {
-            const randomImage = await fetchRandomImage(); // You need to implement this function
+            const randomImage = await fetchRandomImage(); 
             return {
               ...contact,
               randomImage,
@@ -48,18 +47,18 @@ function Welcome() {
       }
     }
 
-    // Function to fetch random images (for demo purposes)
+  
     async function fetchRandomImage() {
       try {
-        const response = await fetch('https://source.unsplash.com/random/300x200'); // You can adjust the image size as needed
+        const response = await fetch('https://source.unsplash.com/random/300x200'); 
         if (response.ok) {
           return response.url;
         } else {
-          return ''; // Return an empty string if fetching the image fails
+          return ''; 
         }
       } catch (error) {
         console.error('Error occurred while fetching random image:', error);
-        return ''; // Return an empty string on error
+        return ''; 
       }
     }
 
@@ -68,11 +67,11 @@ function Welcome() {
 
   return (
       <div>
-      <Header />
+      <HomeHeader />
+      <div className="welcome-message">{welcome}</div>
       <div className="welcome-container">
       <div className="welcome-content">
-        <div className="welcome-message">{welcome}</div>
-        <h1 className="contact-heading">Contacts</h1>
+        <h1 className="contact-heading">Users</h1>
         <div className="contact-list">
           {potentialContacts.length > 0 ? (
             potentialContacts.map((contact, i) => (
