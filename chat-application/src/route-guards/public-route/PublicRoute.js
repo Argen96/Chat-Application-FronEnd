@@ -7,8 +7,8 @@ const isAuthenticated = () => {
 };
 
 const PublicRoute = () => {
-const accessToken = isAuthenticated ()
-    return accessToken ? <Navigate to={ROUTE_HOME}/> : <Outlet/>
+   const accessToken = isAuthenticated ()
+   return accessToken ? <Navigate to={ROUTE_HOME}/> : <Outlet/>
 }
 
 export default PublicRoute

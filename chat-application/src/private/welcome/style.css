@@ -1,0 +1,72 @@
+/* Welcome.css */
+
+.welcome-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .welcome-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-heading {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .contact-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .contact-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 8px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .contact-image {
+    border-radius: 50%;
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .contact-name {
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .no-contacts-message {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+
+  

@@ -17,7 +17,6 @@ function SignUp(){
         const first_name = formData.get("first_name");
         const last_name = formData.get("last_name");
         const values = { email, password_hash, first_name, last_name };
-        console.log(values)
         const response = await fetch('http://localhost:80/api/sign-up', {
             method: 'POST', headers: {
                 'Content-Type': 'application/json; charset=utf-8 '
@@ -26,7 +25,7 @@ function SignUp(){
         const data = await response.json();
         if(response.ok) {
              window.alert("Account is created!");
-             navigate('./log-in');
+             navigate('/log-in');
         }
         else {
              setError(data.message);
@@ -34,11 +33,12 @@ function SignUp(){
     }
 
     const onClick = async (event) => {
-        event.preventDefault();
-        window.open('http://localhost:80/auth/google/callback', '_self')
-        navigate('/welcome')
-      };
-      
+      event.preventDefault();
+      window.open('http://localhost:80/auth/google/callback', '_self');
+    };
+
+    
+    
 return (
   <div> 
    <Header/>
