@@ -18,9 +18,10 @@
   
   .welcome-message {
     font-size: 25px;
-    color: blue;
-    margin-left:100px;
-    margin-top:60px
+    color: rgb(66, 63, 63);
+   text-align: center;
+   margin-top: 50px;
+   font-family:'Times New Roman', Times, serif
   }
   
   .contact-heading {

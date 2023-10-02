@@ -1,6 +1,6 @@
 /* style.css */
-body{
-  margin:0
+body {
+  margin: 0;
 }
 
 .custom-header {
@@ -15,27 +15,36 @@ body{
 .custom-header-text {
   margin: 0; /* Remove default margin for the h1 element */
   font-size: 24px;
+  cursor: pointer;
 }
 
 .header-controls {
   display: flex;
   align-items: center;
+}
+
+.header-controls-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   gap: 10px; /* Adjust the gap between elements as needed */
 }
 
+.message-icon {
+  font-size: 40px; /* Increase the icon size */
+  cursor: pointer;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+}
 .search-bar {
   padding: 5px;
   border: none;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 13.4px;
 }
-
-.header-controls {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-}
-
 
 .search-button {
   background-color: #4b0831; /* Adjust the background color as needed */
@@ -52,7 +61,6 @@ body{
   background-color: #1566d3; /* Adjust the hover background color as needed */
 }
 
-
 .logout-button {
   background-color: #ff5722;
   color: white;
@@ -67,4 +75,3 @@ body{
 .logout-button:hover {
   background-color: #ff4500;
 }
-
