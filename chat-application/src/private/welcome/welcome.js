@@ -78,7 +78,7 @@ function Welcome() {
       last_name: lastName,
     };
 
-    navigate(`/send-message/${userId}`, { state: { user: userData } });
+    navigate(`/send-message/${userId}`, { state: { recipientUser: userData } });
   };
 
   return (

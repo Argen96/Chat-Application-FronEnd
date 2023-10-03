@@ -1,73 +1,84 @@
-.message-container {
-    max-width: 400px;
+body{
+  height: fit-content;
+}
+ 
+ .chat-container {
+  max-width: 800px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    margin-top:10px
   }
   
-  .message-header {
-    text-align: center;
-    margin-bottom: 20px;
+ .chat-header h2 {
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 10px;
   }
   
-  .message-form {
-    display: flex;
-    flex-direction: column;
+  .chat-history {
+    max-height: 500px;
+    overflow-y: scroll;
   }
   
-  .form-group {
-    margin-bottom: 15px;
+  .message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
   }
   
-  label {
+  .sent {
+    background-color: #1d7fe7;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  .received {
+    background-color: #219b4a;
+    color: #ecdcdc;
+  }
+  
+  .message-sender {
     font-weight: bold;
   }
-  
-.message-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh; 
-    margin-top: 150px ;
-    border: 1px solid gray
-  }
-  
-  .message-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .message-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px; /* Adjust this value as needed */
-  }
-  
   .message-input {
-    /* Styling for the message input textarea */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid lightgrey;
+  }
+  
+  .message-input textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    resize: vertical; /* Allow vertical resizing */
+    resize: none;
+    border: none;
+    background-color: #f0f0f0; /* Set your background color */
+    color: #333; /* Set your text color */
   }
   
-  .send-button {
-    background-color: #007bff;
+  /* Styling when the textarea is focused or clicked */
+  .message-input textarea:focus,
+  .message-input textarea:active {
+    outline: none; /* Remove the default focus outline if desired */
+    border: none; 
+  }
+  
+
+  .message-input button {
+    margin-top: 10px;
+    background-color: #ff0000;
     color: #fff;
     border: none;
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 4px;
+    padding: 8px 16px;
     cursor: pointer;
   }
   
-  .send-button:hover {
-    background-color: #a1b300;
+  .message-input button:hover {
+    background-color: #352d0b;
   }
+  
