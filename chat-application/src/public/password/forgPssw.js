@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import {  Link } from "react-router-dom";
-import { useState } from "react";
 import Footer from "../../components/footer/footer.js";
 import Header from "../../components/header/header.js";
 import './style.css'

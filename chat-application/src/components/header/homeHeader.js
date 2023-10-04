@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './style.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import './style.css';
 
 function HomeHeader(props) {
   const navigate = useNavigate();
@@ -69,7 +69,7 @@ function HomeHeader(props) {
       <div className="header-controls">
         <div className="header-controls-right">
           <div className="message-icon">
-            <FontAwesomeIcon icon={faEnvelope} />
+          <Link to="/show-chat"> <FontAwesomeIcon  icon={faEnvelope} /> </Link>
           </div>
           <div className="search-bar-container" onChange={handleChange}>
             <input

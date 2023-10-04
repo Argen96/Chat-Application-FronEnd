@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/header.js';
-import { useState } from "react";
-import { useEffect } from 'react';
 import Footer from '../../components/footer/footer.js';
 import './style.css'
 

@@ -6,13 +6,12 @@ import Footer from "../../../components/footer/footer.js";
 import "./style.css";
 
 function SendMessage() {
-  const [messages, setMessages] = useState([]); // State variable to hold messages
+  const [messages, setMessages] = useState([]); 
   const chatHistoryRef = useRef()
   const [newMessage, setNewMessage] = useState('');
   const { state: { recipientUser } = {} } = useLocation();
-  const [currentUserId, setCurrentUserId] = useState(""); // Corrected typo
+  const [currentUserId, setCurrentUserId] = useState(""); 
   const token = localStorage.getItem("access_token");
-
   const handleNewMessageChange = (e) => {
     setNewMessage(e.target.value);
   };
@@ -83,7 +82,7 @@ function SendMessage() {
       <Header />
       <div className="chat-container">
         <div className="chat-header">
-          <h2>Chat with {recipientUser ? `${recipientUser.first_name} ${recipientUser.last_name}` : "No user selected"}</h2>
+          <h2>Chat with {recipientUser ? `${recipientUser.first_name} ${recipientUser.last_name || ''}` : "No user selected"}</h2>
         </div>
         <div className="chat-history" ref={chatHistoryRef}>
           {messages.map((message, index) => (

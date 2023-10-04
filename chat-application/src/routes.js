@@ -2,14 +2,14 @@ import { createBrowserRouter } from 'react-router-dom'
 import PublicRoute from "./route-guards/public-route/PublicRoute.js";
 import PrivateRoute from './route-guards/private-route/PrivateRoute.js';
 import PublicLayout from "./layouts/public-layout/PublicLayout.js";
-import { ROUTE_HOME, ROUTE_LOGIN, ROUTE_SIGNUP,ROUTE_FORGET_PASSWORD, ROUTE_RESET_PASSWORD, ROUTE_SEND_MESSAGE } from "./utilities/routeNames.js";
+import { ROUTE_HOME, ROUTE_LOGIN, ROUTE_SIGNUP,ROUTE_FORGET_PASSWORD, ROUTE_RESET_PASSWORD, ROUTE_SEND_MESSAGE, ROUTE_SHOW_ALL_CHATS } from "./utilities/routeNames.js";
 import SignUp from './public/signUp/signUp.js';
 import LogIn from './public/login/logIn.js';
 import ForgetPssw from './public/password/forgPssw.js';
 import ResetPasswordPage from './public/password/resetPssw.js';
 import Welcome from './private/welcome/welcome.js';
 import SendMessage from './private/messages/sendMessage/sendMessage.js';
-
+import ShowAllChats from './private/messages/messageHistory/messageHistory.js';
 
 const router = createBrowserRouter(
     [
@@ -92,6 +92,20 @@ const router = createBrowserRouter(
                         {
                             path: ROUTE_SEND_MESSAGE,
                             element: <SendMessage/>,
+                        }
+                    ]
+                }
+            ],
+        },
+        {
+            element: <PrivateRoute />,
+            children: [
+                {
+                    element: <PublicLayout />,
+                    children: [
+                        {
+                            path: ROUTE_SHOW_ALL_CHATS,
+                            element: < ShowAllChats/>,
                         }
                     ]
                 }
