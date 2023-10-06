@@ -38,10 +38,10 @@ h3.user-name {
   flex: 2;
   background-color: #fff; /* Background color for messages */
   padding: 10px;
-  color: #333; /* Message text color */
+  color: #333; 
 }
 
 .timestamp {
   margin-left: 10px;
-  color: #555; /* Timestamp text color */
+  color: #555; 
 }
